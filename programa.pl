@@ -135,3 +135,12 @@ puedeDarUnPaso(Persona, PInicial, PFinal):-
     persona(Persona, Apertura, _),
     puedeSuperarObs(Persona, PFinal),
     Apertura > PFinal - PInicial.
+
+% parte E
+puedeGanarDesde(Persona, Posicion):-
+    camino(Posicion, Meta).
+
+camino(Posicion, Meta):-
+    laMetaEstaEn(Meta),
+    puedeDarUnPaso(Persona, Posicion, Meta),
+
